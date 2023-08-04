@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pet Care Portal</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+
+  header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+
+  nav {
+    background-color: #444;
+    color: #fff;
+    padding: 10px;
+  }
+
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  nav ul li {
+    margin-right: 20px;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  section {
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    border-bottom: 2px solid #444;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+  }
+
+  /* Add more CSS styling here */
+
+  /* Example styling for interactive images */
+  .interactive-image {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .interactive-image:hover .image-overlay {
+    opacity: 1;
+  }
+
+  .image-overlay-content {
+    text-align: center;
+    color: #fff;
+  }
+</style>
+<script>
+  // Add your JavaScript code here
+</script>
+</head>
+<body>
+<header>
+  <h1>Pet Care Portal</h1>
+</header>
+<nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#nutrients">Nutrients</a></li>
+    <li><a href="#vaccinations">Vaccinations</a></li>
+    <li><a href="#health">Health</a></li>
+  </ul>
+</nav>
+<main>
+  <section id="home">
+    <h2>Welcome to the Pet Care Portal</h2>
+    <p>This portal provides information about your pet's nutrients, vaccinations, and health.</p>
+    
+    <p>Making your pet's health our main priority </p>
+    
+  </section>
+  
+<section id="nutrients">
+  <h2>Pet Nutrients</h2>
+  <div id="nutrient-table">
+    <h3>Nutrient Information</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Nutrient</th>
+          <th>Recommended Amount</th>
+          <th>Current Intake</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Protein</td>
+          <td>25g</td>
+          <td>30g</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+  </section>
+  
+  <section id="vaccinations">
+    <h2>Vaccinations</h2>
+  <div id="vaccination-table">
+    <h3>Vaccination Information</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Vaccine</th>
+          <th>Last Administered</th>
+          <th>Next Due</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Rabies</td>
+          <td>2023-01-15</td>
+          <td>2024-01-15</td>
+        </tr>
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+  </div>
+</section>
+  </section>
+  
+  <section id="health">
+    <h2>Pet Health</h2>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pet Care Portal</title>
+<style>
+  /* Your existing CSS styles */
+
+  /* Additional styles for the health form */
+  #health-form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  #health-form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  #health-form input[type="text"],
+  #health-form input[type="number"],
+  #health-form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  #health-form button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+
+  #health-form button:hover {
+    background-color: #555;
+  }
+
+  #health-alert {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f2dede;
+    color: #a94442;
+    border-radius: 3px;
+    display: none;
+  }
+</style>
+<script>
+  // Your existing JavaScript code
+
+  // Additional JavaScript for health form
+  function checkHealth() {
+    var temperature = parseFloat(document.getElementById('temperature').value);
+    var weight = parseFloat(document.getElementById('weight').value);
+
+    var alertMessage = "";
+
+    if (temperature >= 102.5) {
+      alertMessage += "High temperature detected. ";
+    }
+
+    if (weight <= 5 || weight >= 30) {
+      alertMessage += "Abnormal weight. ";
+    }
+
+    if (alertMessage !== "") {
+      document.getElementById('health-alert').innerHTML = alertMessage;
+      document.getElementById('health-alert').style.display = 'block';
+    } else {
+      document.getElementById('health-alert').style.display = 'none';
+    }
+  }
+</script>
+</head>
+<body>
+<section id="health">
+  <div id="health-form">
+    <h3>Enter Pet's Health Data</h3>
+    <form>
+      <label for="temperature">Temperature (Fahrenheit)</label>
+      <input type="number" id="temperature" name="temperature" placeholder="Enter temperature..." required>
+
+      <label for="weight">Weight (lbs)</label>
+      <input type="number" id="weight" name="weight" placeholder="Enter weight..." required>
+
+      <button type="button" onclick="checkHealth()">Check Health</button>
+    </form>
+    <div id="health-alert">
+      <p><strong>Health Alert:</strong> Please take necessary actions based on the detected issues.</p>
+    </div>
+  </div>
+</section>
+</body>
+</html>
+
+  </section>
+</main>
+<footer>
+  <p>&copy; 2023 Pet Care Portal</p>
+  <p>&copy; Shivangi Singh</p>
+  <p>&copy; Anika Mathur</p>
+</footer>
+</body>
+</html>
+
+
+
+  
